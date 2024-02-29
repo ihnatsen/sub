@@ -1,4 +1,4 @@
-#zestaw 1 28.02.2024
+#zestaw 1 -  28.02.2024
 
 ### homework:
     ### zadanie 4
