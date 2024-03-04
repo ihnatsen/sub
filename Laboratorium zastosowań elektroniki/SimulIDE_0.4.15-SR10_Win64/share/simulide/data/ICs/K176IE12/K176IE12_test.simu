@@ -1,0 +1,155 @@
+<circuit reactStep="50" Simu_Step_nS="1000" type="simulide_0.4" Speed_per="100" noLinAcc="5" Speed_sps="1000000" animate="1">
+
+Unique  Id: Node-968: 
+Circuit Id: Node-968
+<item rotation="0" valLabelx="0" objectName="Node-968" labely="-24" boardPos="-1e+6,-1e+6" circRot="-5.486129280331905e+303" mainComp="false" valLabely="0" valLabRot="0" id="Node-968" labelrot="0" boardRot="-1e+6" x="-376" y="-232" circPos="0,0" hflip="1" Show_id="false" labelx="-16" itemtype="Node" vflip="1"/>
+
+Unique  Id: Frequencimeter-966: 
+Circuit Id: Frequencimeter-4
+<item rotation="0" valLabelx="0" objectName="Frequencimeter-966" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Frequencimeter-4" labelrot="0" boardRot="-1e+6" x="-372" y="-148" circPos="0,0" hflip="1" Show_id="false" labelx="-32" itemtype="Frequencimeter" vflip="1"/>
+
+Unique  Id: K176IE12-14: 
+Circuit Id: K176IE12-1
+<item rotation="0" valLabelx="13" objectName="K176IE12-14" labely="-30" boardPos="-1e+6,-1e+6" BoardId="" circRot="2.4179059e-316" mainComp="false" Name="K176IE12" valLabely="36" valLabRot="-90" id="K176IE12-1" labelrot="0" boardRot="-1e+6" x="-352" y="-328" circPos="0,0" Logic_Symbol="true" hflip="1" Show_id="true" labelx="-12" itemtype="Subcircuit" vflip="1"/>
+
+Unique  Id: Clock-13: 
+Circuit Id: 32768 Hz
+<item rotation="0" valLabelx="-16" Freq="32768" Show_Volt="true" objectName="Clock-13" labely="-8" Out="true" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="8" valLabRot="0" id="32768 Hz" labelrot="0" boardRot="-1e+6" x="-400" y="-232" circPos="0,0" Unit=" V" hflip="1" Show_id="true" labelx="-74" itemtype="Clock" Voltage="5" vflip="1" Always_On="false"/>
+
+Unique  Id: Frequencimeter-12: 
+Circuit Id: Frequencimeter-4
+<item rotation="0" valLabelx="0" objectName="Frequencimeter-12" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Frequencimeter-4" labelrot="0" boardRot="-1e+6" x="-132" y="-208" circPos="0,0" hflip="1" Show_id="false" labelx="-32" itemtype="Frequencimeter" vflip="1"/>
+
+Unique  Id: Fixed Voltage-11: 
+Circuit Id: Fixed Voltage-6
+<item rotation="0" valLabelx="-16" Show_Volt="true" objectName="Fixed Voltage-11" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="8" valLabRot="0" id="Fixed Voltage-6" labelrot="0" boardRot="-1e+6" x="-400" y="-272" circPos="0,0" Unit=" V" hflip="1" Show_id="false" labelx="-64" itemtype="Fixed Voltage" Voltage="5" vflip="1"/>
+
+Unique  Id: Fixed Voltage-9: 
+Circuit Id: Fixed Voltage-10
+<item rotation="0" valLabelx="-16" Show_Volt="true" objectName="Fixed Voltage-9" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="8.505424203e-315" mainComp="false" valLabely="8" valLabRot="0" id="Fixed Voltage-10" labelrot="0" boardRot="-1e+6" x="-408" y="-348" circPos="0,0" Unit=" V" hflip="1" Show_id="false" labelx="-64" itemtype="Fixed Voltage" Voltage="5" vflip="1"/>
+
+Unique  Id: Probe-8: 
+Circuit Id: Probe-12
+<item rotation="-45" valLabelx="16" objectName="Probe-8" labely="-16" boardPos="-1e+6,-1e+6" circRot="9.775797564982154e-150" mainComp="false" valLabely="0" valLabRot="45" id="Probe-12" labelrot="45" boardRot="-1e+6" x="-288" y="-340" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Frequencimeter-7: 
+Circuit Id: Frequencimeter-15
+<item rotation="0" valLabelx="0" objectName="Frequencimeter-7" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Frequencimeter-15" labelrot="0" boardRot="-1e+6" x="-132" y="-256" circPos="0,0" hflip="1" Show_id="false" labelx="-32" itemtype="Frequencimeter" vflip="1"/>
+
+Unique  Id: Probe-6: 
+Circuit Id: Probe-17
+<item rotation="-45" valLabelx="16" objectName="Probe-6" labely="-16" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="45" id="Probe-17" labelrot="45" boardRot="-1e+6" x="-252" y="-304" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Probe-5: 
+Circuit Id: Probe-19
+<item rotation="-45" valLabelx="16" objectName="Probe-5" labely="-16" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="45" id="Probe-19" labelrot="45" boardRot="-1e+6" x="-236" y="-296" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Probe-4: 
+Circuit Id: Probe-21
+<item rotation="-45" valLabelx="16" objectName="Probe-4" labely="-16" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="45" id="Probe-21" labelrot="45" boardRot="-1e+6" x="-220" y="-288" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Probe-3: 
+Circuit Id: Probe-23
+<item rotation="-45" valLabelx="16" objectName="Probe-3" labely="-16" boardPos="-1e+6,-1e+6" circRot="nan" mainComp="false" valLabely="0" valLabRot="45" id="Probe-23" labelrot="45" boardRot="-1e+6" x="-204" y="-280" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Clock-498: 
+Circuit Id: 60 Hz
+<item rotation="0" valLabelx="-16" Freq="60" Show_Volt="true" objectName="Clock-498" labely="-5" Out="true" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="8" valLabRot="0" id="60 Hz" labelrot="0" boardRot="-1e+6" x="-404" y="-312" circPos="0,0" Unit=" V" hflip="1" Show_id="true" labelx="-60" itemtype="Clock" Voltage="5" vflip="1" Always_On="false"/>
+
+Unique  Id: Probe-505: 
+Circuit Id: Probe-12
+<item rotation="-45" valLabelx="16" objectName="Probe-505" labely="-16" boardPos="-1e+6,-1e+6" circRot="9.775797564982154e-150" mainComp="false" valLabely="0" valLabRot="45" id="Probe-12" labelrot="45" boardRot="-1e+6" x="-272" y="-332" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Oscope-507: 
+Circuit Id: Oscope-507
+<item rotation="0" TimPos="0,0,0,0" valLabelx="0" Basic_X="135" objectName="Oscope-507" hTick="2528674269" labely="-130" boardPos="-1e+6,-1e+6" AutoSC="2" circRot="8.505424203e-315" mainComp="false" valLabely="0" valLabRot="0" HideCh="false,false,false,false" Filter="0" id="Oscope-507" labelrot="0" boardRot="-1e+6" x="-144" Tunnels=",,," y="-40" Trigger="0" circPos="0,0" VolDiv="1,1,1,1" Basic_Y="135" hflip="1" Show_id="false" labelx="-80" itemtype="Oscope" Tracks="1" vflip="1" VolPos="0,0,0,0"/>
+
+Unique  Id: Node-509: 
+Circuit Id: Node-509
+<item rotation="0" valLabelx="0" objectName="Node-509" labely="-24" boardPos="-1e+6,-1e+6" circRot="-5.486129280331905e+303" mainComp="false" valLabely="0" valLabRot="0" id="Node-509" labelrot="0" boardRot="-1e+6" x="-296" y="-264" circPos="0,0" hflip="1" Show_id="false" labelx="-16" itemtype="Node" vflip="1"/>
+
+Unique  Id: Node-512: 
+Circuit Id: Node-512
+<item rotation="0" valLabelx="0" objectName="Node-512" labely="-24" boardPos="-1e+6,-1e+6" circRot="-5.486129280331905e+303" mainComp="false" valLabely="0" valLabRot="0" id="Node-512" labelrot="0" boardRot="-1e+6" x="-300" y="-272" circPos="0,0" hflip="1" Show_id="false" labelx="-16" itemtype="Node" vflip="1"/>
+
+Unique  Id: Probe-1424: 
+Circuit Id: Probe-12
+<item rotation="-45" valLabelx="16" objectName="Probe-1424" labely="-16" boardPos="-1e+6,-1e+6" circRot="9.775797564982154e-150" mainComp="false" valLabely="0" valLabRot="45" id="Probe-12" labelrot="45" boardRot="-1e+6" x="-296" y="-380" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Connector-17: 
+Circuit Id: Connector-5
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-K" startpinid="Frequencimeter-12-lPin" objectName="Connector-17" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-5" labelrot="0" boardRot="-1e+6" x="-172" y="-208" circPos="0,0" enodeid="Circ_eNode-1865" hflip="1" Show_id="false" pointList="-172,-208,-200,-208,-200,-240,-312,-240" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-19: 
+Circuit Id: Connector-7
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-R1" startpinid="Fixed Voltage-11-outnod" objectName="Connector-19" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-7" labelrot="0" boardRot="-1e+6" x="-384" y="-272" circPos="0,0" enodeid="Circ_eNode-1866" hflip="1" Show_id="false" pointList="-384,-272,-360,-272" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-23: 
+Circuit Id: Connector-11
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-R2" startpinid="Fixed Voltage-9-outnod" objectName="Connector-23" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-11" labelrot="0" boardRot="-1e+6" x="-392" y="-348" circPos="0,0" enodeid="Circ_eNode-1867" hflip="1" Show_id="false" pointList="-392,-348,-372,-348,-372,-320,-360,-320" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-25: 
+Circuit Id: Connector-16
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-F" startpinid="Frequencimeter-7-lPin" objectName="Connector-25" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-16" labelrot="0" boardRot="-1e+6" x="-172" y="-256" circPos="0,0" enodeid="Circ_eNode-1868" hflip="1" Show_id="false" pointList="-172,-256,-312,-256" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-27: 
+Circuit Id: Connector-18
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-T1" startpinid="Probe-6-inpin" objectName="Connector-27" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-18" labelrot="0" boardRot="-1e+6" x="-268" y="-288" circPos="0,0" enodeid="Circ_eNode-1869" hflip="1" Show_id="false" pointList="-268,-288,-312,-288" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-29: 
+Circuit Id: Connector-20
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-T2" startpinid="Probe-5-inpin" objectName="Connector-29" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-20" labelrot="0" boardRot="-1e+6" x="-252" y="-280" circPos="0,0" enodeid="Circ_eNode-1870" hflip="1" Show_id="false" pointList="-252,-280,-312,-280" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-31: 
+Circuit Id: Connector-22
+<item rotation="0" valLabelx="0" endpinid="Node-512-0" startpinid="Probe-4-inpin" objectName="Connector-31" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-22" labelrot="0" boardRot="-1e+6" x="-236" y="-272" circPos="0,0" enodeid="Circ_eNode-1871" hflip="1" Show_id="false" pointList="-236,-272,-300,-272" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-33: 
+Circuit Id: Connector-24
+<item rotation="0" valLabelx="0" endpinid="Node-509-0" startpinid="Probe-3-inpin" objectName="Connector-33" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-24" labelrot="0" boardRot="-1e+6" x="-220" y="-264" circPos="0,0" enodeid="Circ_eNode-1872" hflip="1" Show_id="false" pointList="-220,-264,-296,-264" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-3: 
+Circuit Id: Connector-3
+<item rotation="0" valLabelx="0" endpinid="Node-968-0" startpinid="Clock-13-outnod" objectName="Connector-3" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-3" labelrot="0" boardRot="-1e+6" x="-384" y="-232" circPos="0,0" enodeid="Circ_eNode-1873" hflip="1" Show_id="false" pointList="-384,-232,-376,-232" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-499: 
+Circuit Id: Connector-499
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-C" startpinid="Clock-498-outnod" objectName="Connector-499" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-499" labelrot="0" boardRot="-1e+6" x="-388" y="-312" circPos="0,0" enodeid="Circ_eNode-1874" hflip="1" Show_id="false" pointList="-388,-312,-360,-312" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-504: 
+Circuit Id: Connector-504
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-S1" startpinid="Probe-8-inpin" objectName="Connector-504" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-504" labelrot="0" boardRot="-1e+6" x="-304" y="-324" circPos="0,0" enodeid="Circ_eNode-1875" hflip="1" Show_id="false" pointList="-304,-324,-304,-304,-312,-304" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-506: 
+Circuit Id: Connector-506
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-S2" startpinid="Probe-505-inpin" objectName="Connector-506" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-506" labelrot="0" boardRot="-1e+6" x="-288" y="-316" circPos="0,0" enodeid="Circ_eNode-1876" hflip="1" Show_id="false" pointList="-288,-316,-288,-296,-312,-296" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-508: 
+Circuit Id: Connector-508
+<item rotation="0" valLabelx="0" endpinid="Node-509-1" startpinid="Oscope-507-Pin0" objectName="Connector-508" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-508" labelrot="0" boardRot="-1e+6" x="-232" y="-88" circPos="0,0" enodeid="Circ_eNode-1872" hflip="1" Show_id="false" pointList="-232,-88,-232,-40,-296,-40,-296,-264" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-510: 
+Circuit Id: Connector-510
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-T4" startpinid="Node-509-2" objectName="Connector-510" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-510" labelrot="0" boardRot="-1e+6" x="-296" y="-264" circPos="0,0" enodeid="Circ_eNode-1872" hflip="1" Show_id="false" pointList="-296,-264,-312,-264" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-511: 
+Circuit Id: Connector-511
+<item rotation="0" valLabelx="0" endpinid="Node-512-1" startpinid="Oscope-507-Pin1" objectName="Connector-511" labely="-24" boardPos="-1e+6,-1e+6" circRot="6.817986183429999e+246" mainComp="false" valLabely="0" valLabRot="0" id="Connector-511" labelrot="0" boardRot="-1e+6" x="-232" y="-56" circPos="0,0" enodeid="Circ_eNode-1871" hflip="1" Show_id="false" pointList="-232,-56,-232,-24,-300,-24,-300,-272" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-513: 
+Circuit Id: Connector-513
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-T3" startpinid="Node-512-2" objectName="Connector-513" labely="-24" boardPos="-1e+6,-1e+6" circRot="7.066069780333819e-304" mainComp="false" valLabely="0" valLabRot="0" id="Connector-513" labelrot="0" boardRot="-1e+6" x="-300" y="-272" circPos="0,0" enodeid="Circ_eNode-1871" hflip="1" Show_id="false" pointList="-300,-272,-312,-272" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-967: 
+Circuit Id: Connector-967
+<item rotation="0" valLabelx="0" endpinid="Node-968-1" startpinid="Frequencimeter-966-lPin" objectName="Connector-967" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-967" labelrot="0" boardRot="-1e+6" x="-412" y="-148" circPos="0,0" enodeid="Circ_eNode-1873" hflip="1" Show_id="false" pointList="-412,-148,-412,-184,-376,-184,-376,-232" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-969: 
+Circuit Id: Connector-969
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-Z" startpinid="Node-968-2" objectName="Connector-969" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-969" labelrot="0" boardRot="-1e+6" x="-376" y="-232" circPos="0,0" enodeid="Circ_eNode-1873" hflip="1" Show_id="false" pointList="-376,-232,-360,-232" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-1425: 
+Circuit Id: Connector-1425
+<item rotation="0" valLabelx="0" endpinid="K176IE12-14-M" startpinid="Probe-1424-inpin" objectName="Connector-1425" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-1425" labelrot="0" boardRot="-1e+6" x="-312" y="-364" circPos="0,0" enodeid="Circ_eNode-1877" hflip="1" Show_id="false" pointList="-312,-364,-312,-320" labelx="-16" itemtype="Connector" vflip="1"/>
+ 
+</circuit>

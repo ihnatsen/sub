@@ -1,0 +1,23 @@
+<circuit reactStep="50" Simu_Step_nS="1000" type="simulide_0.4" Speed_per="100" noLinAcc="5" Speed_sps="1000000" animate="0">
+
+Unique  Id: Function-1: 
+Circuit Id: Function-1
+<item rotation="0" valLabelx="0" objectName="Function-1" labely="-24" Out_High_V="5" boardPos="-1e+6,-1e+6" Num_Inputs="2" circRot="0" mainComp="false" Num_Outputs="1" Functions="vo=(vi0-vi1)*1000" valLabely="0" valLabRot="0" Out_Low_V="0" id="Function-1" labelrot="0" boardRot="-1e+6" Out_Imped="40" x="-152" y="-296" Input_Imped="1e+14" circPos="0,0" hflip="1" Show_id="false" Input_Low_V="2.5" Inverted="false" labelx="-16" Input_High_V="2.5" itemtype="Function" vflip="1"/>
+
+Unique  Id: WaveGen-2: 
+Circuit Id: WaveGen-2
+<item rotation="0" valLabelx="-16" Freq="1000" Show_Volt="true" objectName="WaveGen-2" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="2.470348e-316" mainComp="false" valLabely="8" valLabRot="0" Wave_Type="0" id="WaveGen-2" labelrot="0" boardRot="-1e+6" x="-248" Volt_Base="0" y="-288" circPos="0,0" Unit=" V" Quality="5" hflip="1" Show_id="false" Duty_Square="50" labelx="-64" itemtype="WaveGen" Voltage="5" vflip="1" Always_On="false"/>
+
+Unique  Id: Oscope-5: 
+Circuit Id: Oscope-5
+<item rotation="0" TimPos="0,0,0,0" valLabelx="0" Basic_X="135" objectName="Oscope-5" hTick="1000000" labely="-100" boardPos="-1e+6,-1e+6" AutoSC="4" circRot="4.243991588e-314" mainComp="false" valLabely="0" valLabRot="0" HideCh="false,false,false,false" Filter="0" id="Oscope-5" labelrot="0" boardRot="-1e+6" x="24" Tunnels=",,," y="-248" Trigger="4" circPos="0,0" VolDiv="1,1,1,1" Basic_Y="135" hflip="1" Show_id="false" labelx="-90" itemtype="Oscope" Tracks="1" vflip="1" VolPos="0,0,0,0"/>
+
+Unique  Id: Connector-3: 
+Circuit Id: Connector-3
+<item rotation="0" valLabelx="0" endpinid="Function-1-in0" startpinid="WaveGen-2-outnod" objectName="Connector-3" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-3" labelrot="0" boardRot="-1e+6" x="-232" y="-288" circPos="0,0" enodeid="Circ_eNode-6" hflip="1" Show_id="false" pointList="-232,-288,-176,-288" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-4: 
+Circuit Id: Connector-4
+<item rotation="0" valLabelx="0" endpinid="Function-1-in1" startpinid="Function-1-out0" objectName="Connector-4" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-4" labelrot="0" boardRot="-1e+6" x="-128" y="-288" circPos="0,0" enodeid="Circ_eNode-7" hflip="1" Show_id="false" pointList="-128,-288,-128,-256,-176,-256,-176,-280" labelx="-16" itemtype="Connector" vflip="1"/>
+ 
+</circuit>

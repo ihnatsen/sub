@@ -1,0 +1,59 @@
+<circuit reactStep="50" Simu_Step_nS="1000" type="simulide_0.4" Speed_per="100" noLinAcc="5" Speed_sps="1000000" animate="1">
+
+Unique  Id: K176IE5-1: 
+Circuit Id: K176IE5-1
+<item rotation="0" valLabelx="13" objectName="K176IE5-1" labely="-20" boardPos="-1e+6,-1e+6" BoardId="" circRot="2.4728365e-316" mainComp="false" Name="K176IE5" valLabely="32" valLabRot="-90" id="K176IE5-1" labelrot="0" boardRot="-1e+6" x="-240" y="-264" circPos="0,0" Logic_Symbol="true" hflip="1" Show_id="true" labelx="0" itemtype="Subcircuit" vflip="1"/>
+
+Unique  Id: Fixed Voltage-3: 
+Circuit Id: Fixed Voltage-3
+<item rotation="0" valLabelx="-50" Show_Volt="true" objectName="Fixed Voltage-3" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="8.505424203e-315" mainComp="false" valLabely="-7" valLabRot="0" id="Fixed Voltage-3" labelrot="0" boardRot="-1e+6" x="-280" y="-240" circPos="0,0" Unit=" V" hflip="1" Show_id="false" labelx="-64" itemtype="Fixed Voltage" Voltage="5" vflip="1"/>
+
+Unique  Id: Clock-5: 
+Circuit Id: Clock-5
+<item rotation="0" valLabelx="-52" Freq="32768" Show_Volt="true" objectName="Clock-5" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="-1.4238658610948605e+135" mainComp="false" valLabely="-3" valLabRot="0" id="Clock-5" labelrot="0" boardRot="-1e+6" x="-276" y="-180" circPos="0,0" Unit=" V" hflip="1" Show_id="false" labelx="-64" itemtype="Clock" Voltage="5" vflip="1" Always_On="false"/>
+
+Unique  Id: Fixed Voltage-7: 
+Circuit Id: Fixed Voltage-7
+<item rotation="0" valLabelx="-47" Show_Volt="true" objectName="Fixed Voltage-7" labely="-24" Out="false" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="-8" valLabRot="0" id="Fixed Voltage-7" labelrot="0" boardRot="-1e+6" x="-284" y="-208" circPos="0,0" Unit=" V" hflip="1" Show_id="false" labelx="-64" itemtype="Fixed Voltage" Voltage="5" vflip="1"/>
+
+Unique  Id: Frequencimeter-13: 
+Circuit Id: Frequencimeter-13
+<item rotation="0" valLabelx="0" objectName="Frequencimeter-13" labely="-24" boardPos="-1e+6,-1e+6" circRot="nan" mainComp="false" valLabely="0" valLabRot="0" id="Frequencimeter-13" labelrot="0" boardRot="-1e+6" x="-120" y="-192" circPos="0,0" hflip="1" Show_id="false" labelx="-32" itemtype="Frequencimeter" vflip="1"/>
+
+Unique  Id: Probe-267: 
+Circuit Id: Probe-267
+<item rotation="-45" valLabelx="16" objectName="Probe-267" labely="-16" boardPos="-1e+6,-1e+6" circRot="-5.486129280331905e+303" mainComp="false" valLabely="0" valLabRot="45" id="Probe-267" labelrot="45" boardRot="-1e+6" x="-156" y="-280" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Probe-271: 
+Circuit Id: Probe-267
+<item rotation="-45" valLabelx="16" objectName="Probe-271" labely="-16" boardPos="-1e+6,-1e+6" circRot="-5.486129280331905e+303" mainComp="false" valLabely="0" valLabRot="45" id="Probe-267" labelrot="45" boardRot="-1e+6" x="-124" y="-260" circPos="0,0" Threshold="2.5" hflip="1" Show_id="false" Show_volt="true" labelx="16" itemtype="Probe" vflip="1"/>
+
+Unique  Id: Connector-2: 
+Circuit Id: Connector-2
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-10" startpinid="K176IE5-1-9" objectName="Connector-2" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-2" labelrot="0" boardRot="-1e+6" x="-200" y="-256" circPos="0,0" enodeid="Circ_eNode-399" hflip="1" Show_id="false" pointList="-200,-256,-180,-256,-180,-284,-252,-284,-252,-256,-248,-256" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-4: 
+Circuit Id: Connector-4
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-R" startpinid="Fixed Voltage-3-outnod" objectName="Connector-4" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-4" labelrot="0" boardRot="-1e+6" x="-264" y="-240" circPos="0,0" enodeid="Circ_eNode-400" hflip="1" Show_id="false" pointList="-264,-240,-248,-240" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-6: 
+Circuit Id: Connector-6
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-Z" startpinid="Clock-5-outnod" objectName="Connector-6" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-6" labelrot="0" boardRot="-1e+6" x="-260" y="-180" circPos="0,0" enodeid="Circ_eNode-401" hflip="1" Show_id="false" pointList="-260,-180,-248,-180,-248,-208" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-8: 
+Circuit Id: Connector-8
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-S" startpinid="Fixed Voltage-7-outnod" objectName="Connector-8" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-8" labelrot="0" boardRot="-1e+6" x="-268" y="-208" circPos="0,0" enodeid="Circ_eNode-402" hflip="1" Show_id="false" pointList="-268,-208,-260,-208,-260,-224,-248,-224" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-14: 
+Circuit Id: Connector-14
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-!Z" startpinid="Frequencimeter-13-lPin" objectName="Connector-14" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-14" labelrot="0" boardRot="-1e+6" x="-160" y="-192" circPos="0,0" enodeid="Circ_eNode-403" hflip="1" Show_id="false" pointList="-160,-192,-200,-192,-200,-208" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-268: 
+Circuit Id: Connector-268
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-14" startpinid="Probe-267-inpin" objectName="Connector-268" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-268" labelrot="0" boardRot="-1e+6" x="-172" y="-264" circPos="0,0" enodeid="Circ_eNode-404" hflip="1" Show_id="false" pointList="-172,-264,-172,-248,-200,-248" labelx="-16" itemtype="Connector" vflip="1"/>
+
+Unique  Id: Connector-272: 
+Circuit Id: Connector-272
+<item rotation="0" valLabelx="0" endpinid="K176IE5-1-15" startpinid="Probe-271-inpin" objectName="Connector-272" labely="-24" boardPos="-1e+6,-1e+6" circRot="0" mainComp="false" valLabely="0" valLabRot="0" id="Connector-272" labelrot="0" boardRot="-1e+6" x="-140" y="-244" circPos="0,0" enodeid="Circ_eNode-405" hflip="1" Show_id="false" pointList="-140,-244,-168,-244,-168,-240,-200,-240" labelx="-16" itemtype="Connector" vflip="1"/>
+ 
+</circuit>

@@ -1,0 +1,51 @@
+<circuit type="simulide_0.4" Speed_sps="1000000" Speed_per="100" Simu_Step_nS="1000" noLinAcc="5" reactStep="50" animate="0">
+
+Unique  Id: Text-5: 
+Circuit Id: Text-6
+<item boardRot="-1000000" id="Text-6" labely="-24" hflip="1" Border="1" Font="Helvetica [Cronyx]" rotation="0" Opacity="1" circRot="0" valLabely="0" vflip="1" Text="0-9 Counter with 7490.&#xa;&#xa;Turn on Clock to Start Counter." labelrot="0" Margin="5" itemtype="TextComponent" boardPos="-1e+06,-1e+06" Show_id="false" y="-380" Font_Size="10" circPos="0,0" x="-372" mainComp="false" objectName="Text-5" Fixed_Width="true" labelx="-16" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Clock-4: 
+Circuit Id: Clock
+<item boardRot="-1000000" id="Clock" labely="-7" hflip="1" Voltage="5" Out="false" rotation="0" circRot="0" valLabely="8" vflip="1" labelrot="0" Freq="1" itemtype="Clock" boardPos="-1e+06,-1e+06" Show_id="true" y="-292" circPos="0,0" x="-300" mainComp="false" Show_Volt="true" objectName="Clock-4" labelx="-66" Unit=" V" Running="true" valLabRot="0" valLabelx="-16"/>
+
+Unique  Id: 74XX90-3: 
+Circuit Id: 7490
+<item boardRot="-1000000" id="7490" labely="66" hflip="1" rotation="0" circRot="nan" valLabely="0" vflip="1" labelrot="0" itemtype="Subcircuit" boardPos="-1e+06,-1e+06" Show_id="true" y="-252" circPos="0,0" x="-316" mainComp="false" objectName="74XX90-3" labelx="0" valLabRot="0" valLabelx="0" Logic_Symbol="false"/>
+
+Unique  Id: 7-2: 
+Circuit Id: 7-3
+<item boardRot="-1000000" id="7-3" labely="-24" hflip="1" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="7-Seg BCD" boardPos="-1e+06,-1e+06" Show_id="false" y="-268" circPos="0,0" x="-228" mainComp="false" objectName="7-2" labelx="-16" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Node-1: 
+Circuit Id: Node-2
+<item boardRot="-1000000" id="Node-2" labely="-24" hflip="1" rotation="0" circRot="1.3454893685719834e-316" valLabely="0" vflip="1" labelrot="0" itemtype="Node" boardPos="-1e+06,-1e+06" Show_id="false" y="-228" circPos="0,0" x="-260" mainComp="false" objectName="Node-1" labelx="-16" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-6: 
+Circuit Id: Connector-7
+<item boardRot="-1000000" enodeid="Circ_eNode-7" id="Connector-7" labely="-24" hflip="1" endpinid="74XX90-3-CP0" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-292" startpinid="Clock-4-outnod" circPos="0,0" x="-284" mainComp="false" objectName="Connector-6" labelx="-16" pointList="-284,-292,-268,-292,-268,-244,-276,-244" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-8: 
+Circuit Id: Connector-9
+<item boardRot="-1000000" enodeid="Circ_eNode-9" id="Connector-9" labely="-24" hflip="1" endpinid="Node-1-0" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-228" startpinid="74XX90-3-Q0" circPos="0,0" x="-276" mainComp="false" objectName="Connector-8" labelx="-16" pointList="-276,-228,-260,-228" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-10: 
+Circuit Id: Connector-11
+<item boardRot="-1000000" enodeid="Circ_eNode-9" id="Connector-11" labely="-24" hflip="1" endpinid="74XX90-3-CP1" rotation="0" circRot="2.1362080723786757e-306" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-228" startpinid="Node-1-2" circPos="0,0" x="-260" mainComp="false" objectName="Connector-10" labelx="-16" pointList="-260,-228,-260,-260,-332,-260,-332,-244,-324,-244" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-11: 
+Circuit Id: Connector-12
+<item boardRot="-1000000" enodeid="Circ_eNode-9" id="Connector-12" labely="-24" hflip="1" endpinid="7-2-in0" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-228" startpinid="Node-1-1" circPos="0,0" x="-260" mainComp="false" objectName="Connector-11" labelx="-16" pointList="-260,-228,-212,-228,-212,-236" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-12: 
+Circuit Id: Connector-13
+<item boardRot="-1000000" enodeid="Circ_eNode-13" id="Connector-13" labely="-24" hflip="1" endpinid="7-2-in1" rotation="0" circRot="6.9531436082568959e-310" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-204" startpinid="74XX90-3-Q1" circPos="0,0" x="-276" mainComp="false" objectName="Connector-12" labelx="-16" pointList="-276,-204,-220,-204,-220,-236" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-14: 
+Circuit Id: Connector-17
+<item boardRot="-1000000" enodeid="Circ_eNode-15" id="Connector-17" labely="-24" hflip="1" endpinid="7-2-in3" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-220" startpinid="74XX90-3-Q3" circPos="0,0" x="-276" mainComp="false" objectName="Connector-14" labelx="-16" pointList="-276,-220,-236,-220,-236,-236" valLabRot="0" valLabelx="0"/>
+
+Unique  Id: Connector-16: 
+Circuit Id: Connector-15
+<item boardRot="-1000000" enodeid="Circ_eNode-17" id="Connector-15" labely="-24" hflip="1" endpinid="7-2-in2" rotation="0" circRot="0" valLabely="0" vflip="1" labelrot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" Show_id="false" y="-196" startpinid="74XX90-3-Q2" circPos="0,0" x="-276" mainComp="false" objectName="Connector-16" labelx="-16" pointList="-276,-196,-228,-196,-228,-236" valLabRot="0" valLabelx="0"/>
+ 
+</circuit>

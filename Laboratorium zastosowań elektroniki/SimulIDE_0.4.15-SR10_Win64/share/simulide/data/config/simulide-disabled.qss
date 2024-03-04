@@ -1,0 +1,47 @@
+QLabel#freq0, QLabel#freq1, QLabel#freq2, QLabel#freq3{
+    font: bold 9px;
+}
+
+
+
+QWidget#DataWidget{
+    border: 2px;
+    margin: 10px;
+    padding: 10px;
+    spacing: 10px;
+}
+
+QListView#registers{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+QListView#registers::item{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+/* This is working */
+QTableWidget#rtStatus,
+QTableWidget#rtPc
+{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+    /*columnWidth: 28px;  This is working */
+}
+
+/* QTableWidget has no "item" control
+QTableWidget::item{
+    border: 0px;
+    max-width: 28px;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+    font: bold 20px;
+}*/
