@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #444;
+      padding: 20px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      text-align: center;
+    }
+    .header {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 15px 0;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .button:hover {
+      background-color: #444;
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    }
+    .button:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+    #display {
+      background-color: #555;
+      border: none;
+      padding: 15px 0;
+      font-size: 24px;
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+    <script>
+		const display = document.getElementById('display') 
+		
+		function appendToDisplay(value) {
+		   display.value += value;
+		}
+		function clearDisplay() {
+		  display.value = '';
+		}
+		function calculate() {
+		  try {
+			display.value = eval(display.value);
+		  } catch (error) {
+			display.value = 'Error';
+		  }
+		}
+		function calculateSquareRoot() {
+		  const value = parseFloat(display.value);
+		  if (!isNaN(value)) {
+			display.value = Math.sqrt(value);
+		  }
+		}
+		function clearEntry() {
+		  display.value = '';
+		}
+		function backspace() {
+		  display.value = display.value.slice(0, -1);
+		}
+  </script>
+</head>
+<body>
+  <div class="calculator">
+    <div class="header">Calculator</div>
+    <input type="text" id="display" value="">
+    <div class="button-container">
+      <button class="button" onclick="appendToDisplay('1')">1</button>
+      <button class="button" onclick="appendToDisplay('2')">2</button>
+      <button class="button" onclick="appendToDisplay('3')">3</button>
+      <button class="button" onclick="appendToDisplay('+')">+</button>
+      <button class="button" onclick="appendToDisplay('4')">4</button>
+      <button class="button" onclick="appendToDisplay('5')">5</button>
+      <button class="button" onclick="appendToDisplay('6')">6</button>
+      <button class="button" onclick="appendToDisplay('-')">-</button>
+      <button class="button" onclick="appendToDisplay('7')">7</button>
+      <button class="button" onclick="appendToDisplay('8')">8</button>
+      <button class="button" onclick="appendToDisplay('9')">9</button>
+      <button class="button" onclick="appendToDisplay('*')">*</button>
+      <button class="button" onclick="appendToDisplay('0')">0</button>
+      <button class="button" onclick="appendToDisplay('.')">.</button>
+      <button class="button" onclick="clearDisplay()">C</button>
+      <button class="button" onclick="calculate()">=</button>
+      <button class="button" onclick="appendToDisplay('/')">/</button>
+      <button class="button" onclick="calculateSquareRoot()">√</button>
+      <button class="button" onclick="clearEntry()">CE</button>
+      <button class="button" onclick="backspace()">&#9003;</button>
+    </div>
+  </div>
+
+</body>
+</html>

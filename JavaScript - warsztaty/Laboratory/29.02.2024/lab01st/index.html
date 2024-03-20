@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function calulateProcent(){
+            let ocena = Number(document.getElementById("ocena").value);
+            switch (ocena) {
+                case 2:
+                    alert('do 50 %');
+                    break
+                case 3:
+                    alert('od 51 do 60 %');
+                    break
+                case 3.5:
+                    alert('od 61 do 70 %');
+                    break
+                case 4:
+                    alert('od 71 do 80 %')
+                    break
+                case 4.5:
+                    alert('od 81 do 90 %')
+                    break
+                case 5:
+                    alert('powyżej 100 %')
+                    break
+                default:
+                    alert("Error")
+
+            }
+        }
+    </script>
+</head>
+    <body>
+    <h1>Ocena</h1>
+    <form id="milesform">
+        <h2>Obliczenia</h2>
+        <label for="ocena">Ocena:</label>
+        <input type="text" id="ocena" name="ocena"><br/>
+        <input type="button" value="Przelicz" onclick="calulateProcent()">
+    </form>
+    </body>
+</html>

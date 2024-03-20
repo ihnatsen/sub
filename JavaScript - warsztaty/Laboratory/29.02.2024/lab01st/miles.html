@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="UTF-8">
+  	<script>
+		const multiplierMilesToKm = 1.6093;
+		const multiplierKmtoMiles = 0.6214;
+
+		let conversionType = 'mileskm'
+		function handleChange(source) {
+	  		alert(source.value);//do zakomentowania później
+	  		if (source.value == "mileskm") {
+				document.getElementById("miles").readOnly = false;
+				document.getElementById("kilometers").readOnly = true;
+				conversionType = 'mileskm'
+	  		} else {
+	    		document.getElementById("miles").readOnly = true;
+				document.getElementById("kilometers").readOnly = false;
+				conversionType = 'km'
+	  		}
+		}
+	
+		function calulateValue() {
+			//na razie tylko w jedną stronę
+			console.log("conversionType "+conversionType)
+			if(conversionType == 'mileskm' ) {
+				let milesValue = Number(document.getElementById("miles").value);
+				let kmValue = multiplierMilesToKm * milesValue;
+				if (!isNaN(kmValue)) {
+					document.getElementById("kilometers").value = kmValue;
+				} else {
+					alert("To nie liczba");
+				}
+			}else{
+				let milesValue = Number(document.getElementById("kilometers").value);
+				console.log(milesValue)
+				let kmValue = multiplierKmtoMiles * milesValue;
+				console.log(kmValue)
+				if (!isNaN(kmValue)) {
+					document.getElementById("miles").value = kmValue;
+				} else {
+					alert("To nie liczba");
+				}
+			}
+		}
+  
+  	</script>
+</head>
+<body>
+<h1>Miles &amp; kilometers</h1>
+<form id="milesform">
+	<h2>Wybierz sposób konwersji</h2>
+	<input type="radio" id="milestokm" onchange="handleChange(this);" name="mileskm" value="m" checked>
+	<label for="milestokm">mile na km</label><br>
+	<input type="radio" id="kmtomieles" onchange="handleChange(this);" name="mileskm" value="km">
+	<label for="kmtomieles">km na mile</label><br>
+	
+	<h2>Obliczenia</h2>
+	<label for="miles">Mile:</label>
+  	<input type="text" id="miles" name="miles"><br><br>
+  	<label for="kilometers">Kilometry:</label>
+  	<input type="text" id="kilometers" name="kilometers"><br><br>
+  	<input type="button" value="Przelicz" onclick="calulateValue()">
+</form>
+</body>
+</html>

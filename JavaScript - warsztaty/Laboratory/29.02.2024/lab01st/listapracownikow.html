@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+	let employees = [];
+
+	function displayEmployees() {
+	    document.getElementById("employeeList").innerHTML = "";
+		let htmlToInsert = ""
+		for (let i = 0; i<employees.length; i++) {
+			htmlToInsert += "<span"+" id="+i+">" + employees[i] + "&nbsp;<input id=" + i + " " + "type='button' value='Usuń' onclick='removeParent(this,"+i+")'><br><br></span>";
+
+		}
+		document.getElementById("employeeList").innerHTML = htmlToInsert;
+	}
+	
+	function addEmployee() {
+
+
+
+		// забрать с анкеты имя
+	   	let name = document.getElementById("name").value;
+	  	let surname = document.getElementById("surname").value;
+	   	if (name.length < 2) {
+	      	document.getElementById("nameError").style.display = "block";
+	      	document.getElementById("nameError").innerHTML = "Imię powinno zawierać co najmiej 2 znaki<br>";
+		} else if(test("" + name + " "+surname)){
+			document.getElementById("nameError").style.display = "block";
+			document.getElementById("nameError").innerHTML = "Pracownik juz w liscie<br>";
+		} else {
+	      	employees.push("" + name + " "+surname);
+			document.getElementById("nameError").innerHTML = "";
+	   	}
+	   	displayEmployees();
+	}
+	
+	function resetForm() {
+	    document.getElementById("nameError").style.display = "none";
+		document.getElementById("nameError").innerHTML = ""
+		for(let i = 0; i<employees.length; i++){
+			document.getElementById(i).remove()
+		}
+		employees = []
+	}
+	
+	function removeParent(source,i) {
+		index = employees.indexOf(source.valueOf())
+		employees.splice(index, 1)
+		source.innerHTML = ''
+		document.getElementById(i).remove()
+	}
+	function test(name) {
+		for (let i = 0; i < employees.length; ++i) {
+			if (employees[i] == name) {
+				return true
+			}
+		}
+		return false
+	}
+  
+  </script>
+</head>
+<body>
+<h1>Pracownicy</h1>
+<h2>Dodaj pracownika:</h2 >
+<form id="employeesForm">
+  	<label for="name">Imię:</label>
+  	<input type="text" id="name" name="name"><br>
+  	<span id="nameError" style="color:red;display:none;"></span>
+  	<br>
+  	<label for="surname">Nazwisko:</label>
+  	<input type="text" id="surname" name="surname"><br><br>
+  	<input type="button" value="Dodaj pracownika" onclick="addEmployee()">
+  	<button type="reset" onclick="resetForm()" >Reset</button>
+</form>
+<h2>Lista pracowników</h2 >
+<span id="employeeList" ></span>
+</body>
+</html>

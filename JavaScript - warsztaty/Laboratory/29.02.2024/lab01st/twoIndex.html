@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const number = Math.floor(Math.random()*100+1)
+        function play() {
+            console.log(number)
+            let users_number = Number(document.getElementById("liczba").value);
+            console.log(users_number)
+
+            if (users_number == number){
+                alert("Success")
+            }else if(users_number>number){
+                alert("Twoja liczba wiekszy")
+            }
+            else{
+                alert("Twoja liczba mniejsza")}
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Liczba losujaca</h1>
+<form id="milesform">
+    <h2>Podaj liczbe</h2>
+    <label for="liczba">Liczba:</label>
+    <input type="text" id="liczba" name="liczba"><br/>
+    <input type="button" value="ok" onclick="play()">
+</form>
+</body>
+</html>
