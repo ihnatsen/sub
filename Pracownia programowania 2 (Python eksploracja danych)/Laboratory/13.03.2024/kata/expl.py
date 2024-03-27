@@ -26,17 +26,15 @@ def task_three():
 
 def task_four():
     print('task №4')
-    presents = list(df.groupby(['Pclass'])["Survived"].mean())
+    presents = dict(df.groupby(['Pclass'])["Survived"].mean())
     # or
-    presents = [df[df['Pclass'] == name_class]["Survived"].mean() for name_class in range(1, 4)]
-
-    presents = [f'{present * 100:_.2f}%' for present in presents]
-    sorted_by_classes_for_survived = dict(zip([*range(1, 4)], presents))
-    print(sorted_by_classes_for_survived)
+    presents = {name_class: f'{df[df['Pclass'] == name_class]["Survived"].mean()*100:_.2f}' for name_class in range(1, 4)}
+    print(presents)
 
 
 def task_five():
     print('task №5')
+
     presents_for_sex = dict(df.groupby(['Sex'])['Survived'].mean())
     values = [f'{present * 100:_.2f}%' for present in presents_for_sex.values()]
 
@@ -63,8 +61,8 @@ def task_seven():
 
 def task_eight():
     print('task №8')
-    tickets = dict(Counter(list(df['Pclass']))).values()
-    plt.barh(['1', '2', '3'], tickets)
+    labels, tickets = dict(Counter(list(df['Pclass']))).keys(), dict(Counter(list(df['Pclass']))).values()
+    plt.barh([str(name) for name in labels], tickets)
     plt.title('Licbza pasażerów w każdej klasie bilietu.')
     plt.xlabel('Ilość')
     plt.ylabel('Klas')
@@ -72,14 +70,15 @@ def task_eight():
 
 
 def main():
-    task_one()
-    task_two()
-    task_three()
+    # task_one()
+    # task_two()
+    # task_three()
     task_four()
-    task_five()
-    task_six()
-    task_seven()
-    task_eight()
+    # task_five()
+    # task_six()
+    # task_seven()
+    # task_eight()
+    pass
 
 
 if __name__ == '__main__':

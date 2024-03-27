@@ -138,26 +138,25 @@ class CellFour:
 
 def main():
 
-    # CellOne.task_one()
-    # CellOne.task_two()
-    # CellOne.task_three()
-    # CellOne.task_four()
-    # CellOne.task_five()
+    CellOne.task_one()
+    CellOne.task_two()
+    CellOne.task_three()
+    CellOne.task_four()
+    CellOne.task_five()
 
-    # CellTwo.task_one()
-    # CellTwo.task_two()
-    # CellTwo.task_three()
-    # CellTwo.task_four()
-    # CellTwo.task_five()
+    CellTwo.task_one()
+    CellTwo.task_two()
+    CellTwo.task_three()
+    CellTwo.task_four()
+    CellTwo.task_five()
 
-    # CellThree.task_one()
-    # CellThree.task_two()
-    # CellThree.task_three()
-    # CellThree.task_four()
-    # CellThree.task_five()
+    CellThree.task_one()
+    CellThree.task_two()
+    CellThree.task_three()
+    CellThree.task_four()
+    CellThree.task_five()
 
-    # CellFour.task_one()
-    pass
+    CellFour.task_one()
 
 
 if __name__ == '__main__':
