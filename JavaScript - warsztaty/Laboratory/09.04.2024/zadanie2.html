@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lista pracowników</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+<script>
+let peopleList = [];
+
+$(document).ready(function() {
+    function checkingInListWorker(worker, listWorker){
+
+        console.log('checkingInListWorker')
+        let keys = worker.keys
+        for (theWorker in listWorker){
+            for(let key in keys){
+                if(worker[key] !== theWorker[key]){
+                    console.log(1)
+                    return false
+                }
+            }
+        }
+
+        if(listWorker.length === 0){
+            return true
+        }
+        return true
+    }
+    let table = $('#peopleTable').DataTable({
+        columns: [
+            { data: 'name' },
+            { data: 'surname' },
+            { data: 'email' },
+			{ data: 'date' } ,
+            { data: 'action' }
+        ]
+    });
+
+    // Dodawanie danych do tabeli
+    peopleList.forEach(function(person) {
+        if(checkingInListWorker(person, peopleList) === false){
+            table.row.add(person).draw();
+        }else{
+            alert('Worker had already added to list.')
+        }
+
+    });
+
+    // Funkcja do dodawania nowego elementu
+    function addNewPerson(name, surname, email, date) {
+        let newPerson = { name: name, surname: surname, email: email, date: date, action: '<button class="removeButton">Usuń</button' };
+        table.row.add(newPerson).draw();
+    }
+	
+	document.getElementById("myForm").addEventListener("submit", function(event) {
+		event.preventDefault(); // Zapobiega domyślnej akcji formularza
+
+		// Pobierz wartości z pól formularza
+		let name = document.getElementById("name").value;
+		let surname = document.getElementById("surname").value;
+		let email = document.getElementById("email").value;
+		let date = document.getElementById("date").value;
+		
+		// Utwórz obiekt zawierający dane z formularza
+		let person = {
+			name: name,
+			surname: surname,
+			email: email,
+			date: date
+		};
+
+		// Dodaj obiekt do listy obiektów
+		addPersonToList(person);
+	
+		//Dodanie nowego wiersza do datatables
+		addNewPerson(name, surname, email, date);
+
+		// Wyczyść pola formularza
+		document.getElementById("myForm").reset();
+	});
+
+	function addPersonToList(person) {
+        if(checkingInListWorker(person, peopleList) === false){
+            table.row.add(person).draw();
+        }else {
+            // Utwórz element <li> zawierający dane osoby
+            let listItem = document.createElement("li");
+            listItem.textContent = "Imię: " + person.name + ", Nazwisko: " + person.surname + ", Email: " + person.email + ", Data zatr.: " + person.date;
+
+            // Dodaj element <li> do listy
+            document.getElementById("peopleList").appendChild(listItem);
+        }
+	}
+
+    $('#peopleTable tbody').on('click', '.removeButton', function () {
+        var rowData = table.row($(this).parents('tr')).data();
+        alert(rowData)
+        //korzystamy z pola obiektu
+        alert(rowData.email)
+        //pobierz dane z drugiej kolumny
+        var email = table.cell($(this).parents('tr'), 2).data(); 
+        alert(email)
+        
+        //usuń obiekt o podanym e-mail z listy peopleList
+        
+        var row = table.row($(this).parents('tr'));
+        row.remove().draw();
+    });
+});
+</script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+</head>
+<body>
+
+<h2>Dodawanie do listy obiektów</h2>
+
+<form id="myForm">
+    <label for="name">Imię:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="surname">Nazwisko:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+	<label for="date">Data zatrudnienia:</label><br>
+    <input type="date" id="date" name="date"><br><br>
+    <input type="submit" value="Dodaj do listy">
+</form>
+
+<ul id="peopleList"></ul>
+
+<h2>Lista osób - DataTables</h2>
+
+<table id="peopleTable" class="display">
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Email</th>
+			<th>Data</th>
+            <th>Akcja</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dane będą dodawane dynamicznie -->
+    </tbody>
+</table>
+
+<script>
+
+
+</script>
+
+</body>
+</html>
