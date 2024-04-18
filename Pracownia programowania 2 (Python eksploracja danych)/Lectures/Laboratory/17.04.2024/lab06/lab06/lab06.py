@@ -1,12 +1,15 @@
+# 17.04.2024 Ivan Ihnatsenkau 21595
 import numpy as np
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.datasets import fetch_california_housing
 
+class Task:
 
-class CellOne:
     @staticmethod
-    def task_one():
+    def one():
+
         X = np.array([
             50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150,
             160, 170, 180, 190, 200, 210, 220, 230, 240, 250,
@@ -18,8 +21,8 @@ class CellOne:
             580, 600, 620, 640, 660, 680, 700, 720, 740, 760,
             780, 800, 820, 840, 860, 880, 900, 920, 1200, 1300
         ])
-
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.9, random_state=42)
+        y = X
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         model = LinearRegression()
         model.fit(X_train, y_train)
@@ -36,14 +39,8 @@ class CellOne:
         plt.legend()
         plt.show()
 
-
-def answer():
-    """10% = 0.55; 50% = 0.88; 80% = 0.79; 90% = 0.79"""
-    pass
-
-
 def main():
-    CellOne.task_one()
+    Task.one()
 
 
 if __name__ == '__main__':

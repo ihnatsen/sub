@@ -70,13 +70,13 @@ def task_eight():
 
 
 def main():
-    # task_one()
-    # task_two()
-    # task_three()
-    # task_four()
-    # task_five()
-    # task_six()
-    # task_seven()
+    task_one()
+    task_two()
+    task_three()
+    task_four()
+    task_five()
+    task_six()
+    task_seven()
     task_eight()
     pass
 
