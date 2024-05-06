@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExercisesThree</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Dodawanie do listy obiektów</h2>
+
+<form id="myForm">
+    <label for="regNr">NrRejestracyjny:</label><br>
+    <input type="text" id="regNr" name="regNr"><br>
+
+    <label for="dateGet">DataWypozyczenia:</label><br>
+    <input type="date" id="dateGet" name="dateGet"><br>
+
+    <label for="name">Imie wypożyczającego:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="surname">Nazwisko:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+
+    <label for="dateBack">DataZwrotu</label><br>
+    <input type="date" id="dateBack" name="dateBack"><br><br>
+
+    <input type="submit" value="Dodaj do listy">
+</form>
+
+<ul id="peopleList"></ul>
+
+<h2>Lista osób - DataTables</h2>
+
+<table id="carsdatabases" class="display">
+    <thead>
+    <tr>
+        <th>Numer</th>
+        <th>Data Wypozyczenia</th>
+        <th>Imie wypożyczającego</th>
+        <th>Nazwisko</th>
+        <th>DataZwrotu</th>
+        <th>Settings</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

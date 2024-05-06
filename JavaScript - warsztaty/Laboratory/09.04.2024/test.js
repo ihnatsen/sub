@@ -1,16 +1,19 @@
-object_one = {name: 'Ivan', age: 22 }
-object_two = {name: 'Ivan', age: 22 }
-object_three = {name: 'Ivan', age: 22 }
-object_four = {name: 'Ooo', age: 22 }
-list = [object_one, object_two, object_three]
+person_one = {name:'Ivan', age: 22, email:"node@jsmail.com"};
+person_two = {name:'Anna', age: 32, email:"node@jsmail.com"};
+person_three = {name:'Kate', age: 23, email:"python@py.com"};
 
-function checking(object, listObject){
-    let parseObject = JSON.stringify(object)
-    for(let index= 0; index<listObject.length; index++){
-        if(parseObject === JSON.stringify(listObject[index])){
-            return false
-        }
-    return true
+list = [person_one, person_two];
+empty_list = [];
+
+function checking(object, lst){
+    if(lst.length===0){
+        return false;
     }
+    for(let i= 0; i< list.length; i++) {
+        if(object.name === lst[i].name){
+            return true;
+        }
+    }
+    return false
 }
-console.log(checking(object_four,list))
+console.log(checking(person_three,mpty_list));

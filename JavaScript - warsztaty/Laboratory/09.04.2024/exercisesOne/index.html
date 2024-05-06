@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista pracowników</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+</head>
+<body>
+
+<h2>Dodawanie do listy obiektów</h2>
+
+<form id="myForm">
+    <label for="name">Imię:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="surname">Nazwisko:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="date">Data zatrudnienia:</label><br>
+    <input type="date" id="date" name="date"><br><br>
+    <input type="submit" value="Dodaj do listy">
+</form>
+
+<ul id="peopleList"></ul>
+<button onclick="updatePeopleList()">Aktualizuj listę</button>
+
+<h2>Lista osób - DataTables</h2>
+
+<table id="peopleTable" class="display">
+    <thead>
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Email</th>
+        <th>Data</th>
+        <th>Akcja</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Dane będą dodawane dynamicznie -->
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
