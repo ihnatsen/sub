@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testowanie Ciasteczek</title>
+    <script>
+        async function setCookie() {
+            try {
+                const response = await fetch('http://localhost:4002/set-cookie');
+                const message = await response.text();
+                document.getElementById('message').innerText = message;
+            } catch (error) {
+                console.error('Error setting cookie:', error);
+            }
+        }
+
+        async function getCookie() {
+            try {
+                const response = await fetch('http://localhost:4002/get-cookie');
+                const cookies = await response.text();
+                document.getElementById('cookies').innerText = cookies;
+            } catch (error) {
+                console.error('Error getting cookie:', error);
+            }
+        }
+
+        async function clearCookie() {
+            try {
+                const response = await fetch('http://localhost:4002' +
+                    '/clear-cookie');
+                const message = await response.text();
+                document.getElementById('message').innerText = message;
+            } catch (error) {
+                console.error('Error clearing cookie:', error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Testowanie Ciasteczek</h1>
+    <button onclick="setCookie()">Ustaw Ciasteczka</button>
+    <button onclick="getCookie()">Odczytaj Ciasteczka</button>
+    <button onclick="clearCookie()">Usuń Ciasteczka</button>
+
+    <p id="message"></p>
+    <p id="cookies"></p>
+</body>
+</html>

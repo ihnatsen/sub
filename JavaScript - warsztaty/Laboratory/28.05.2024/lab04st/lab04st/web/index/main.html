@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarRent</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        async function setCookie() {
+            try {
+                const response = await fetch('http://localhost:4002/set-cookie');
+                const message = await response.text();
+                document.getElementById('message').innerText = message;
+            } catch (error) {
+                console.error('Error setting cookie:', error);
+            }
+        }
+
+        async function getCookie() {
+            try {
+                const response = await fetch('http://localhost:4002/get-cookie');
+                const cookies = await response.text();
+                document.getElementById('cookies').innerText = cookies;
+            } catch (error) {
+                console.error('Error getting cookie:', error);
+            }
+        }
+
+        async function clearCookie() {
+            try {
+                const response = await fetch('http://localhost:4002' +
+                    '/clear-cookie');
+                const message = await response.text();
+                document.getElementById('message').innerText = message;
+            } catch (error) {
+                console.error('Error clearing cookie:', error);
+            }
+        }
+        async function register() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            const response = await fetch('http://localhost:4002/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+            const message = await response.text();
+            document.getElementById('register-message').innerText = message;
+        }
+
+        async function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const response = await fetch('http://localhost:4002/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+            const message = await response.text();
+            document.getElementById('login-message').innerText = message;
+        }
+    </script>
+</head>
+<body>
+<header class="top">
+    <img id="headerLogo" src="https://static.vecteezy.com/system/resources/previews/017/227/087/non_2x/rental-car-logo-template-design-vector.jpg", height="150px">
+    <div id="log">
+        <p>Rejestracja</p>
+        <input type="text" id="reg-username" placeholder="Nazwa użytkownika">
+        <input type="password" id="reg-password" placeholder="Hasło">
+        <button onclick="register()">Zarejestruj się</button>
+        <p id="register-message"></p>
+
+        <p>Logowanie</p>
+        <input type="text" id="login-username" placeholder="Nazwa użytkownika">
+        <input type="password" id="login-password" placeholder="Hasło">
+        <button onclick="login()">Zaloguj się</button>
+        <p id="login-message"></p>
+        <h1>Testowanie Ciasteczek</h1>
+        <button onclick="setCookie()">Ustaw Ciasteczka</button>
+        <button onclick="getCookie()">Odczytaj Ciasteczka</button>
+        <button onclick="clearCookie()">Usuń Ciasteczka</button>
+
+        <p id="message"></p>
+        <p id="cookies"></p>
+    </div>
+</header>
+
+<section id="main">
+    <h1>About</h1>
+    <p>
+        Landing in Warsaw puts you at the center of all attractions in Poland due to its central location. Getting cheap car rentals in Warsaw provides a good base for taking day trips from the city at your convenience. Drive about 1h 25min outside Warsaw to explore the Mazovia region, around 55 miles away via the DK7 route. Travel to the tranquil Masurian Lake District is also more convenient with Warsaw car rentals. The district is roughly 207 miles, and the journey takes about 3h 20min via the S7. Take a day trip to Turon, a UNESCO World Heritage site, under 4h drive from Warsaw.    </p>
+
+</section>
+
+
+    <footer>
+        © 2024, CarIhnatsen
+        <br>
+        All trademarks and registered trademarks appearing on
+        this site are the property of their respective owners.
+    </footer>
+
+</div>
+</body>
+</html>

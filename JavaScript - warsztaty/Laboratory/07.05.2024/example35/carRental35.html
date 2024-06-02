@@ -4,94 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Rental Form</title>
+  <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-  <h2>Car Rental Form</h2>
+<header class="top">
+  <img id="headerLogo" src="https://static.tvtropes.org/pmwiki/pub/images/pimp_my_ride.png">
+  <img id="XzIbiT" src="imag/pngegg.png">
+</header>
+
+<section id="main">
+  <h1>Pimp My Ride</h1>
+  <p>
+    Pimp My Ride is an American television series produced by MTV and hosted by rapper Xzibit, which ran for six seasons on MTV from 2004 to 2007. In each episode, a car in poor condition is both restored and customized. The work on the show was done by West Coast Customs until season 5 and was done by Galpin Auto Sports thereafter.
+  </p>
+
+</section>
+
+<div id="Form">
+  <h2>Send me your form</h2>
   <form id="rentalForm">
-    <label for="vehicleRegistrationNumber">Vehicle Registration Number:</label><br>
-    <input type="text" id="vehicleRegistrationNumber" name="vehicleRegistrationNumber"><br>
+    <label for="vehicleMake">Car make:</label><br>
+    <input type="text" id="vehicleMake" name="vehicleMake"><br>
 
-    <label for="rentedDate">Rented Date:</label><br>
-    <input type="date" id="rentedDate" name="rentedDate"><br>
+    <label for="rentedModel">Model:</label><br>
+    <input type="text" id="rentedModel" name="rentedModel   "><br>
 
-    <label for="dateOfReturn">Date of Return:</label><br>
-    <input type="date" id="dateOfReturn" name="dateOfReturn"><br>
+    <label for="registrationNumberReturn">Registration number:</label><br>
+    <input type="text" id="registrationNumberReturn" name="registrationNumberReturn"><br>
 
-    <label for="dateLastName">Last Name</label><br>
-    <input type="text" id="dateLastName" name="dateLastName"><br>
+    <label for="dateYearOfProduction">Year of production</label><br>
+    <input type="date" id="dateYearOfProduction" name="dateYearOfProduction"><br>
 
-    <label for="dateSecondName">Second Name</label><br>
-    <input type="text" id="dateSecondName" name="dateSecondName"><br><br>
-
-    <label for="datePESEL">PESEL</label><br>
-    <input type="text" id="datePESEL" name="dataPESEL"><br><br>
-
+    <label for="VIN">VIN</label><br>
+    <input type="text" id="VIN" name="VIN"><br><br>
     <button type="submit">Submit</button>
   </form>
 
-  <h2>Display Car Rentals Form</h2>
-  <form id="getCarsRentalForm">
-    <button type="button" id="getCarsRentalButton">Pobierz dane z serwera</button>
-  </form>
-  <ol id="carList">
-
-  </ol>
-
-  <form id="displayRentalForm">
-    <label for="vehicleRegistrationNumberDisplay">Vehicle Registration Number:</label><br>
-    <input type="text" id="vehicleRegistrationNumberDisplay" name="vehicleRegistrationNumberDisplay"><br>
-
-    <label for="rentedDateDisplay">Rented Date:</label><br>
-    <input type="date" id="rentedDateDisplay" name="rentedDateDisplay"><br>
-
-    <label for="dateOfReturnDisplay">Date of Return:</label><br>
-    <input type="date" id="dateOfReturnDisplay" name="dateOfReturnDisplay"><br><br>
+  <footer>
+    © 2024, Pimp my Rider MTV
+    <br>
+    All trademarks and registered trademarks appearing on
+    this site are the property of their respective owners.
+  </footer>
 
 
-    <label for="dateLastNameDisplay">Last Name</label><br>
-    <input type="text" id="dateLastNameDisplay" name="dateLastNameDisplay"><br>
-
-    <label for="dateSecondName">Second Name</label><br>
-    <input type="text" id="dateSecondNameDisplay" name="dateSecondNameDisplay"><br><br>
-
-    <label for="datePESEL">PESEL</label><br>
-    <input type="text" id="datePESELDisplay" name="dataPESELDisplay"><br><br>
-
-    <button type="button" id="nextButton">Next</button>
-  </form>
-
-  <script>
-    // Definicja klasy CarRental
-    class CarRental {
-      constructor(vehicleRegistrationNumber, rentedDate, dateOfReturn, PESEL, lastName, secondName) {
-        this.vehicleRegistrationNumber = vehicleRegistrationNumber;
-        this.rentedDate = rentedDate;
-        this.dateOfReturn = dateOfReturn;
-        this.PESEL = PESEL;
-        this.lastName = lastName;
-        this.secondName = secondName;
-
-
-      }
+</div>
+<script>
+class CarRental {
+    constructor(vehicleMake, rentedModel, registrationNumberReturn, dateYearOfProduction, VIN) {
+    this.vehicleMake = vehicleMake;
+    this.rentedModel = rentedModel;
+    this.registrationNumberReturn = registrationNumberReturn;
+    this.dateYearOfProduction = dateYearOfProduction;
+    this.VIN = VIN;
     }
+}
+
 
     let carRentals = [];
     let carRentalsJSON = "";
     let carIndex = 0;
 
     function handleSubmit(event) {
-      event.preventDefault(); // Zapobiega domyślnej akcji przesyłania formularza
+      event.preventDefault(); //
 
-      const vehicleRegistrationNumber = document.getElementById('vehicleRegistrationNumber').value;
-      const rentedDate = document.getElementById('rentedDate').value;
-      const dateOfReturn = document.getElementById('dateOfReturn').value;
-      const datePesel = document.getElementById('datePESEL').value;
-      const dateLastName = document.getElementById('dateLastName').value;
-      const dateSecondName = document.getElementById('dateSecondName').value;
+      const vehicleMake = document.getElementById('vehicleMake').value;
+      const rentedModel = document.getElementById('rentedModel').value;
+      const registrationNumberReturn = document.getElementById('registrationNumberReturn').value;
+      const dateYearOfProduction = document.getElementById('dateYearOfProduction').value;
+      const VIN = document.getElementById('VIN').value;
 
-      const rentalInfo = new CarRental(vehicleRegistrationNumber,
-              rentedDate, dateOfReturn, datePesel, dateLastName, dateSecondName);
-
+      const rentalInfo = new CarRental(vehicleMake,
+              rentedModel, registrationNumberReturn, dateYearOfProduction, VIN);
 
       carRentals.push(rentalInfo);
 
@@ -173,6 +157,6 @@
       .catch(error => console.error('Error fetching data:', error));
     });
     
-  </script>
+</script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie i Rejestracja</title>
+    <script>
+        async function register() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            const response = await fetch('http://localhost:4002/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+            const message = await response.text();
+            document.getElementById('register-message').innerText = message;
+        }
+
+        async function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const response = await fetch('http://localhost:4002/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+            const message = await response.text();
+            document.getElementById('login-message').innerText = message;
+        }
+    </script>
+</head>
+<body>
+    <h1>Logowanie i Rejestracja</h1>
+    <h2>Rejestracja</h2>
+    <input type="text" id="reg-username" placeholder="Nazwa użytkownika">
+    <input type="password" id="reg-password" placeholder="Hasło">
+    <button onclick="register()">Zarejestruj się</button>
+    <p id="register-message"></p>
+
+    <h2>Logowanie</h2>
+    <input type="text" id="login-username" placeholder="Nazwa użytkownika">
+    <input type="password" id="login-password" placeholder="Hasło">
+    <button onclick="login()">Zaloguj się</button>
+    <p id="login-message"></p>
+</body>
+</html>
