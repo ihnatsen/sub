@@ -1,0 +1,21 @@
+Model regresji liniowej (LinearRegression) nie pasuje do rozwiązania problemu klasyfikacji.
+Każdy z pozostałych algorytmów jest algorytmem z nadzorem i rozwiązuje problem klasyfikacji.
+
+Drzewa decyzyjne - model, który opiera się na zadawaniu pytań. Jest wrażliwy na overfitting, ale
+łatwy do interpretacji. Na korzeniu drzewa znajduje się najsilniejszy czynnik, który wpływa na finalną decyzję.
+Lasy losowe - meta-algorytm (Ensemble learning), którego podstawą są drzewa decyzyjne i algorytm bootstrap. W tym
+modelu znajduje się wiele drzew decyzyjnych, których uczenie opiera się na różnych podzbiorach danych. Końcowa
+prognoza jest większością decyzji drzew.
+
+Maszyny wektorów nośnych - model, którego celem jest znalezienie hiperpłaszczyzny rozdzielającej z maksymalnym
+marginesem. W zależności od formy klasyfikacji, dla hiperpłaszczyzny istnieje kilka jąder.
+
+regresja logistyczna. Ta regresja daje odpowiedź jako prawdopodobieństwo zdarzenia binarnego:
+P(Y) = 1/(1+e**-(b0 + b1X1+...+bnXn))
+
+W zależności od tego, czy boimy się pomyłek w prognozowaniu:
+- Jeśli tak, to wybrałbym model SVM, ponieważ dokładniej prognozuje pozytywne wyniki (Precision) i jego wartość jest
+bliższa 1.
+- Jeśli nie, wybrałbym model prostego drzewa decyzyjnego (Simple tree), ponieważ dokładniej prognozuje ogólnie (Accuracy)
+i jego wartość jest bliższa 1.
+
