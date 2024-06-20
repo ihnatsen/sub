@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Resource</title>
+</head>
+<body>
+  <h1 id="title">Protected Resource</h1>
+  <p id="content">Loading...</p>
+  <button id="logout">Logout</button>
+
+  <script>
+    async function getProtectedContent() {
+      const response = await fetch('/protected', {
+        method: 'GET',
+        credentials: 'same-origin'
+      });
+
+      if (response.ok) {
+        const content = 'This is a protected resource. Only logged-in users can see this.';
+        document.getElementById('content').innerText = content;
+      } else {
+        window.location.href = '/login.html';
+      }
+    }
+
+    document.getElementById('logout').addEventListener('click', async () => {
+      await fetch('/logout', {
+        method: 'POST',
+        credentials: 'same-origin'
+      });
+      window.location.href = '/login.html';
+    });
+
+    getProtectedContent();
+  </script>
+</body>
+</html>

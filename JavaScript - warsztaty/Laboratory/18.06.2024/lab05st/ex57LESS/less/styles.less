@@ -1,0 +1,22 @@
+// styles.less
+
+@primary-color: #FF00000;
+@radius: 20px;
+
+body {
+  color: @primary-color;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box {
+  .border-radius(@radius);
+}
+
+div {
+  .border-radius(@radius);
+}

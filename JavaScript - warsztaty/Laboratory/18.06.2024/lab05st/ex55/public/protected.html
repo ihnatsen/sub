@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Resource</title>
+</head>
+<body>
+  <h1>Protected Resource</h1>
+  <button id="getProtected">Get Protected Resource</button>
+  <button id="logout">Logout</button>
+  <p id="protectedContent"></p>
+
+  <script>
+    document.getElementById('getProtected').addEventListener('click', async () => {
+      const token = localStorage.getItem('token');
+      const response = await fetch('/protected', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+
+      if (response.ok) {
+        const content = await response.text();
+        document.getElementById('protectedContent').innerText = content;
+      } else {
+        document.getElementById('protectedContent').innerText = 'Failed to fetch protected resource';
+      }
+    });
+
+    document.getElementById('logout').addEventListener('click', () => {
+      //localStorage.removeItem('token');
+      alert('Logged out');
+    });
+  </script>
+</body>
+</html>

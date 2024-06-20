@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosta Animacja na Canvasie</title>
+<style>
+  canvas {
+    border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400"></canvas>
+<script>
+  // Pobierz element canvas
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+
+  // Pozycja początkowa
+  var x = 50;
+  var y = 50;
+
+  // Prędkość ruchu
+  var dx = 2;
+  var dy = 2;
+
+  // Funkcja rysująca
+  function draw() {
+    // Wyczyść canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Rysuj kwadrat
+    ctx.beginPath();
+    ctx.rect(x, y, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+    ctx.closePath();
+
+    // Zmiana kierunku, jeśli kwadrat dotyka krawędzi canvasu
+    if (x + dx > canvas.width - 50 || x + dx < 0) {
+      dx = -dx;
+    }
+    if (y + dy > canvas.height - 50 || y + dy < 0) {
+      dy = -dy;
+    }
+
+    // Zaktualizuj pozycję
+    x += dx;
+    y += dy;
+  }
+
+  // Główna pętla animacji
+  function animate() {
+    draw();
+    requestAnimationFrame(animate);
+  }
+
+  // Uruchom animację
+  animate();
+</script>
+</body>
+</html>
